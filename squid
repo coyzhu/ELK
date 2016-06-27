@@ -1,0 +1,1 @@
+SQUIDACCESS %{NUMBER:timestamp}\s+%{NUMBER:response_time} (?<src_ip>%{IPORHOST}(|:%{POSINT})([,][%20]%{IPORHOST})*|-) %{WORD:squid_request_status}/%{NUMBER:http_status_code} %{NUMBER:reply_size_include_header} %{WORD:http_method} %{URI:request_url} %{USERNAME:user} %{WORD:squid_hierarchy_status}/(?<server_ip_or_peer_name>%{IPORHOST}|-) (?<mime_content_type>\S+\/\S+|-)
